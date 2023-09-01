@@ -9,6 +9,21 @@
 
 //code
 
+//way 1
 function isIsogram(str){
     return new Set(str.toLowerCase()).size === str.length
     }
+
+// way 2
+
+function isIsogram(str){
+    const letterCount = {};
+      
+      for (const letter of str.toLowerCase()){
+        if (letterCount[letter]){
+          return false;
+        }else{
+          letterCount[letter] = true;
+        }
+      } return true;
+    };
